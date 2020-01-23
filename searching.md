@@ -3,7 +3,6 @@
 ## Linear Search
 
 * Idea
-Basic
 
 * Code
 ```c++
@@ -20,7 +19,6 @@ O(n)
 ## Binary Search
 
 * Idea
-Basic
 
 * Code
 ```c++
