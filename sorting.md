@@ -136,3 +136,86 @@ void counting_sort(int A[], int Aux[], int sortedA[], int n){
 ```
 * Complexity
 O(N+K)
+
+## Merge Sort
+
+* Idea
+Breaking down list into sublist until each sublist consist of one element and then merging in such a way that it results in a sorted list.
+
+* Code
+```c++
+void merge (int A[], int start, int mid, int end){
+	int p = start, q = mid+1;
+	int Arr[end-start+1], k =0;
+
+	for(int i = start, i<=end; i++){
+		if(p>mid){
+			Arr[k++] = A[q++];
+		}
+		else if(q>end){
+			Arr[k++] = A[p++];
+		}
+		else if (A[p] < A[q]){
+			Arr[k++] = A[p++];
+		}
+		else 
+			Arr[k++] = A[q++];
+	}
+	for(int p =0; p<k ; p++){
+		A[start+++] = Arr[p];
+	}
+}
+void merge_sort(int A[], int start, int end){
+	if(start < end) {
+		int mid = (start+end) /2;
+		merge_sort(A, start, mid);
+		merge_sort(A, mid+1, end);
+	}
+	merge(A, start, mid, end);
+}
+```
+* Complexity
+list of N divided into max of LogN parts and then merging into single takes O(N) time
+O(NLogN)
+[check this out lol](https://stackoverflow.com/questions/24594112/when-will-the-worst-case-of-merge-sort-occur)
+
+## Quick Sort
+
+* Idea
+Breaking down list into sublist until each sublist consist of one element and then merging in such a way that it results in a sorted list.
+
+* Code
+```c++
+int partition (int A[], int start, int end){
+	int i = start+1;
+	int piv = A[start];
+	for(int j = start+1; j<=end; j++){
+		if(A[j] < piv)
+			swap(A[i], A[j]);
+		i++;
+	}
+	swap(A[start, A[i-1]]);
+	return i-1;
+}
+void quick_sort(int A[], int start, int end){
+	if(start < end) {
+		int piv_pos = partition (A, start, end);
+		quick_sort(A, start, piv_pos-1);
+		quick_sort(A, piv_pos+1, end);
+	}
+	merge(A, start, mid, end);
+}
+```
+using rand_partition() instead of partition() to reduce time complexity
+
+```c++
+int rand_partition(int A[], int start, int end){
+	int random = start+rand() % (end-start+1);
+	swap(A[random, A[start]]);
+	return partition(A, start, end);
+}
+```
+* Complexity
+worst case O(N^2), with randomised the complexity fluctuates between O(N^2) to O(NlogN)
+
+
