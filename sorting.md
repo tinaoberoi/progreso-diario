@@ -24,7 +24,6 @@ void bubble sort(int A[], int n){
 
 * Complexity
 O(n^2)
----
 
 ## Selection Sort
 
@@ -52,7 +51,6 @@ finding min in N elements => n comparisons, array reduced to n-1 (1 element plac
 n-1 elements => n-2 comparisons
 (n-1)+(n-2)+(n-3)+-----+1 = n*(n-1)/2
 **O(n^2)**
----
 
 ## Insertion Sort
 
@@ -76,8 +74,6 @@ void insertion sort(int A[], int n ){
 
 * Complexity
 **O(n^2)**
-
----
 
 ## Counting Sort
 
@@ -109,8 +105,6 @@ void counting_sort(int A[], int Aux[], int sortedA[], int n){
 ```
 * Complexity
 O(N+K)
-
----
 
 ## Radix Sort
 
