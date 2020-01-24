@@ -32,6 +32,7 @@ int main ()
 ```
 
 > **Output**
-
+Quote break.
 > lower_bound for 6 at position 3
+Quote break.
 > upper_bound for 6 at position 6
