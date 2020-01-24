@@ -1,4 +1,4 @@
- Searching Algos
+# Searching Algos
 
 ## Linear Search
 
