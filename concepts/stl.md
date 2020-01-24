@@ -32,6 +32,7 @@ int main ()
 ```
 
 > **Output**
+>
 > lower_bound for 6 at position 3
 >
 > upper_bound for 6 at position 6
