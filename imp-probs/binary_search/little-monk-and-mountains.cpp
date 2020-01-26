@@ -1,3 +1,16 @@
+/* 
+(https://www.hackerearth.com/practice/algorithms/searching/binary-search/practice-problems/algorithm/little-monk-and-mountains/description/)
+
+Explaination:
+
+1. merge intervals for it to be continuos
+2. binary search for intervals
+3. return actual starting point + x - transformed starting point of interval
+
+Time Complexity of each is O(Q*Log(N))
+Space Complexity O(N)
+*/
+
 #include<bits/stdc++.h>
 using namespace std;
 #define xx first

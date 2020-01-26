@@ -1,3 +1,14 @@
+/* 
+(https://www.hackerearth.com/practice/algorithms/searching/binary-search/practice-problems/algorithm/circular-distance-3/editorial/)
+
+Explaination:
+
+1. Apply binary search to find last index such that p[i]*2 < r*2
+
+Time Complexity of each is O(nlogn + qlogn)
+Space Complexity O(N)
+*/
+
 #include<bits/stdc++.h> 
 using namespace std;
 #define ll long long
