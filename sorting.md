@@ -176,8 +176,9 @@ void merge_sort(int A[], int start, int end){
 		int mid = (start+end) /2;
 		merge_sort(A, start, mid);
 		merge_sort(A, mid+1, end);
+
+		merge(A, start, mid, end);
 	}
-	merge(A, start, mid, end);
 }
 ```
 * Complexity
