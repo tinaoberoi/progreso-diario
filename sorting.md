@@ -72,8 +72,14 @@ void insertion sort(int A[], int n ){
 }
 ```
 
-* Complexity
+* Time Complexity
+Worst case: Decreasing Order into increasing order
+Best Case: Input already sorted in increasing order
 **O(n^2)**
+* Space Complexity
+O(1)
+* Uses
+When number of elements small, or most of the elements are soreted
 
 ## Counting Sort
 
