@@ -154,7 +154,7 @@ void merge (int A[], int start, int mid, int end){
 	int p = start, q = mid+1;
 	int Arr[end-start+1], k =0;
 
-	for(int i = start, i<=end; i++){
+	for(int i = start; i<=end; i++){
 		if(p>mid){
 			Arr[k++] = A[q++];
 		}
@@ -168,7 +168,7 @@ void merge (int A[], int start, int mid, int end){
 			Arr[k++] = A[q++];
 	}
 	for(int p =0; p<k ; p++){
-		A[start+++] = Arr[p];
+		A[start++] = Arr[p];
 	}
 }
 void merge_sort(int A[], int start, int end){
