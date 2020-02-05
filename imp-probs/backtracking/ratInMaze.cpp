@@ -18,6 +18,7 @@ void helper(int maze[][20], int n, int x, int y, int solution[20][20]){
     if(x == n-1 && y == n-1){
         solution[x][y] = 1;
         printSol(solution, n);
+        solution[x][y] = 0;
     }
     
     if(notValid(maze, n, x, y, solution))
