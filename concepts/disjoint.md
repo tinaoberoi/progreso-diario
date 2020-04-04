@@ -1,5 +1,9 @@
 # Disjoint Data Structures
 
+* Data Structure that keeps track of a set of elements partitioned into number of disjoint subsets (non-overlapping subsets)
+* union-find algorithm is an algorithm that performs 2 useful operations on a data structure, union and find.
+* **Find:** Determine which subset a particular element is in. This can be used for determining if two elements are in the same subset.
+* **Union:** Join two subsets into a single subset.
 * Helps reducing exec time of algorithm
 * Useful in graphs to connect nodes or finding connected components
 
