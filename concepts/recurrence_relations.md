@@ -1,0 +1,2 @@
+[Analysis of Algorithms, Solving the recurrences](https://www.geeksforgeeks.org/analysis-algorithm-set-4-master-method-solving-recurrences/)
+[Different types of recurrences solutions](https://www.geeksforgeeks.org/different-types-recurrence-relations-solutions/)
