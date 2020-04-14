@@ -29,11 +29,14 @@ def old_macdonald(name):
 	ans = ''
 	count = 0
 	for s in name:
+		print(s)
 		if(count == 0 and count == 3):
-			ans+=s[count:count+1].capitalize()
+			ans+=s.upper()
+			print(ans)
 			count+=1
 		else:
 			ans+=s
+			print(ans)
 			count+=1
 	return ans
 
