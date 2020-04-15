@@ -74,9 +74,6 @@ void right_view(node* root){
 	}
 }
 
-void bottom_view(node* root){
-	
-}
 
 int main(){
 	struct node* root = newnode(1);
