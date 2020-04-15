@@ -47,6 +47,37 @@ void left_view(node* root){
 	}
 }
 
+void right_view(node* root){
+	if(root == NULL)
+		return;
+	queue<node *>q;
+	q.push(root);
+	bool level = 0;
+
+	while(!q.empty()){
+		int z = q.size();
+		for(int i =0; i<z; i++){
+			auto p = q.front();
+			if(!level){
+				cout<<p->val<<" ";
+				level=!level;
+			}
+			q.pop();
+
+			if(p->right != NULL)
+				q.push(p->right);
+			if(p->left != NULL){
+				q.push(p->left);
+			}
+		}
+		level = !level;
+	}
+}
+
+void bottom_view(node* root){
+	
+}
+
 int main(){
 	struct node* root = newnode(1);
 	root->left = newnode(2);
@@ -63,7 +94,9 @@ int main(){
 	root->right->left->right = newnode(8);
 	//root->right->right->left = newnode(14);
 	//root->right->right->right = newnode(15);
-	
+	cout<<"Left View of Tree"<<endl;
 	left_view(root);
+	cout<<"Right View of Tree"<<endl;
+	right_view(root)	;
     return 0;
 }
