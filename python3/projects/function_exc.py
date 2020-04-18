@@ -101,21 +101,23 @@ def spy_game(nums):
 	return False
 #print(spy_game([1,0,2,4,0,5,7]))
 
-import math
-
-def ifprime(num):
-	if(num%2 == 0 and num>2):
-		return False
-	for i in range(3, sqrt(num)+1, 2):
-		if(num%i == 0):
-			return False
-	return True
-
 def count_primes(num):
-	count = 0;
-	for i in num:
-		if(ifprime(i)):
+	primes = [True]*(num+1)
+	p=j=2
+	count = 0
+	while(p*p<=num):
+		#if primes[p] true, p is prime
+		if(primes[p] == True):
+			i = p*p
+			while(i<=num):
+				primes[i] = False
+				i+=p
+		p+=1
+
+	while(j<=num):
+		if(primes[j] == True):
 			count+=1
+		j+=1
 	return count
 
 print(count_primes(100))
