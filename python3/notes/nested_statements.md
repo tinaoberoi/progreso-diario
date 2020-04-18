@@ -1,0 +1,1 @@
+[Read this ](https://github.com/Pierian-Data/Complete-Python-3-Bootcamp/blob/master/03-Methods%20and%20Functions/06-Nested%20Statements%20and%20Scope.ipynb)
