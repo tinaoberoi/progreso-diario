@@ -1,9 +1,6 @@
 /*
 https://www.techiedelight.com/determine-two-nodes-are-cousins/
-*/
-
-/*
-https://www.techiedelight.com/find-next-node-in-same-level-binary-tree/
+cousins = different parent but same level
 */
 
 #include<bits/stdc++.h>
