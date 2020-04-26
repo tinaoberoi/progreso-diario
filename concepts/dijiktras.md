@@ -1,6 +1,8 @@
 # Graph Algorithm : Dijiktras
 Given a graph and a source vertex, find shortest paths from source to all vertices in the given graph
 *Single source to all nodes shortest path*
+* Thus known as **SSSP** (Single source shortest path algo)
+* This is for weighted graphs, we can use BFS for unweighted graphs for shortest path
 
 ## How the Algorithm works?
 [Explaination](https://www.youtube.com/watch?v=NR4fpjuxnPA)
