@@ -12,3 +12,4 @@
 - Unvalidated input — Attackers tamper with HTTP request (including the url, headers and form fields) to bypass the site’s security mechanisms.
 - Layer 7 DoS — An HTTP flood attack that utilizes valid requests in typical URL data retrievals.
 - Web scraping — Data scraping used for extracting data from websites.
+* There are 2 types of WAF models, positive ("whitelist", rejects everything that is not allowed) and negative ("blacklist", has a list of banned items and allwows everything else)
