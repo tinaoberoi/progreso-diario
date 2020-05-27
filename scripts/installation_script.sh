@@ -18,4 +18,8 @@ sudo apt update
 echo "Installing termonator --------------------------------------------------"
 #sudo apt-get install terminator
 echo "Installing g++ compiler for c/c++ --------------------------------------------------"
-sudo apt install g++
+#sudo apt install g++
+echo "Installing tree --------------------------------------------------"
+#sudo apt install tree
+echo "Installing python3-virtualenv --------------------------------------------------"
+sudo apt install python3-virtualenv
