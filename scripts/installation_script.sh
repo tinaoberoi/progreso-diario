@@ -15,4 +15,7 @@ sudo apt update
 #sudo apt install sublime-text
 # start subl using command line
 #sudo ln -s /opt/sublime/sublime_text /usr/bin/subl
-sudo apt-get install terminator
+echo "Installing termonator --------------------------------------------------"
+#sudo apt-get install terminator
+echo "Installing g++ compiler for c/c++ --------------------------------------------------"
+sudo apt install g++
