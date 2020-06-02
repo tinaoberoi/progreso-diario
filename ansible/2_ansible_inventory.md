@@ -69,3 +69,99 @@ ansible <name of host> -m ping -i <inventory file>
 This returns success and ensures a successful connectivity
 
 **NoteStroting passwords in plain text not ideal. Best parctise is to set us SSH key based password auth system b/w the servers. ** 
+
+
+## Excerises:
+
+Ansible Inventory
+The web servers are linux, but the db server is windows. Add additional parameters in each line to add ansible_connection, ansible_user and password. Use the below table for information about credentials.
+
+
+Alias	Host	Connection	User	Password
+web1	server1.company.com	SSH	root	Password123!
+web2	server2.company.com	SSH	root	Password123!
+web3	server3.company.com	SSH	root	Password123!
+db1	server4.company.com	Windows	administrator	Password123!
+
+```yaml
+# Sample Inventory File
+
+# Web Servers
+web1 ansible_host=server1.company.com ansible_connection=ssh ansible_user=root ansible_ssh_pass=Password123!
+web2 ansible_host=server2.company.com ansible_connection=ssh ansible_user=root ansible_ssh_pass=Password123!
+web3 ansible_host=server3.company.com ansible_connection=ssh ansible_user=root ansible_ssh_pass=Password123!
+
+# Database Servers
+db1 ansible_host=server4.company.com ansible_connection=winrm ansible_user=administrator ansible_password=Password123!
+```
+
+We have created a group for web servers. Similarly create a group for database servers named db_servers and add db1 server to it.
+```
+# Sample Inventory File
+
+# Web Servers
+web1 ansible_host=server1.company.com ansible_connection=ssh ansible_user=root ansible_ssh_pass=Password123!
+web2 ansible_host=server2.company.com ansible_connection=ssh ansible_user=root ansible_ssh_pass=Password123!
+web3 ansible_host=server3.company.com ansible_connection=ssh ansible_user=root ansible_ssh_pass=Password123!
+
+# Database Servers
+db1 ansible_host=server4.company.com ansible_connection=winrm ansible_user=administrator ansible_password=Password123!
+
+[web_servers]
+web1
+web2
+web3
+```
+```
+# Sample Inventory File
+
+# Web Servers
+web1 ansible_host=server1.company.com ansible_connection=ssh ansible_user=root ansible_ssh_pass=Password123!
+web2 ansible_host=server2.company.com ansible_connection=ssh ansible_user=root ansible_ssh_pass=Password123!
+web3 ansible_host=server3.company.com ansible_connection=ssh ansible_user=root ansible_ssh_pass=Password123!
+
+# Database Servers
+db1 ansible_host=server4.company.com ansible_connection=winrm ansible_user=administrator ansible_password=Password123!
+
+
+[web_servers]
+web1
+web2
+web3
+
+[db_servers]
+db1
+```
+
+Let us now create a group of groups. Create a new group called all_servers and add the previously created groups web_servers and db_servers to it.
+
+
+Note: Syntax:
+[parent_group:children]
+child_group1
+child_group2
+
+```
+# Sample Inventory File
+
+# Web Servers
+web1 ansible_host=server1.company.com ansible_connection=ssh ansible_user=root ansible_ssh_pass=Password123!
+web2 ansible_host=server2.company.com ansible_connection=ssh ansible_user=root ansible_ssh_pass=Password123!
+web3 ansible_host=server3.company.com ansible_connection=ssh ansible_user=root ansible_ssh_pass=Password123!
+
+# Database Servers
+db1 ansible_host=server4.company.com ansible_connection=winrm ansible_user=administrator ansible_password=Password123!
+
+
+[web_servers]
+web1
+web2
+web3
+
+[db_servers]
+db1
+
+[all_servers:children]
+web_servers
+db_servers
+```
