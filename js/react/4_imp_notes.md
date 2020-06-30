@@ -119,3 +119,43 @@ this.state.person[0].name = "Some other name";
 ```js
 this.setState({ })
 ```` 
+
+## React Hooks for states
+
+- setState feature is only available in class based components, Prior to React 16.8 this was the only way to manage state.
+- After 16.8, we also have React Hooks
+- useState Hook allows us to manage state, we call it like a function
+- **this** keyword is wrong as we are not in class anymore.
+```js
+import { useState } from 'react';
+
+const app = () => {
+  
+  const [personState, setPersonState] = useState({
+    persons: [
+       { name: 'A', age: 28},
+       { name: 'B', age: 28},
+       { name: 'C', age: 28},
+    ]
+  });
+
+  const switchNameHandler = () =>{
+    setPersonState({
+       { name: 'A1', age: 28},
+       { name: 'B1', age: 28},
+       { name: 'C1', age: 28},  
+    )}
+  }
+
+    return (
+      <div className="App">
+        <h1>Hi this is a react app!</h1>
+        <button onClick={switchNameHandler}> Switch Name</button>
+        <Person name={personState.persons[0].name} age={personState.persons[0].age}/>
+      </div>
+    );
+    //return React.createElement('div', React.createElement('h1',null, 'Hello World!'));
+}
+
+```
+- you can use any number of useSate.
