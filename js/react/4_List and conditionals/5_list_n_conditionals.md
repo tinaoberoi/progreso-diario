@@ -235,4 +235,82 @@ class App extends Component {
 export default App;
 ```
 
+### Deleting lists
+- In App.js
+```js
+class App extends Component {
+
+  state = {
+    inputstring: "",
+    inputlen : 0,
+    statement: ""
+  }
+
+  changeInputHandler = (event) => {
+    console.log(event.target.value);
+    let s = event.target.value;
+    if(s.length > 5){
+      this.setState({statement: "Text long enough"});
+    }else{
+      this.setState({statement: "Text too short"});
+    }
+    this.setState({ inputstring: s });
+    this.setState({ inputlen: s.length });
+
+  }
+
+  deleteHandler = (index) => {
+    const text = this.state.inputstring.split('');
+    text.splice(index, 1);
+    const updatedText = text.join('');
+    this.setState({inputstring: updatedText});
+  }
+  
+  render() {
+    
+    
+
+    const list = [...this.state.inputstring];
+    const listMap = list.map((s, index) => { 
+      return <CharComponent letter={s} index={index} click={() => this.deleteHandler(index)}/>
+    });
+    
+    
+    return (
+      <div className="App">
+        <h1>Hello World!</h1>
+        <input onChange={ this.changeInputHandler }/>
+        <ValidationComponent len={this.state.inputlen} s={this.state.statement}/>
+        <CharComponent />
+        {listMap}
+      </div>
+    );
+  }
+}
+
+export default App;
+
+````
+- In Char.js
+```js
+import React, { Component } from 'react';
+
+const CharComponent = (props) => {
+  const style = {
+      display: 'inline-block',
+      border: '1px solid black',
+      padding: '16px',
+      textAlign: 'center',
+      margin: '16px',
+      color: 'green',
+      backgroundColor: 'blue'
+    };
+  return (
+    <div style={style} onClick = {props.click} >
+       <p>{props.value}: {props.letter} </p>
+    </div> 
+  )
+};
+
+export default CharComponent;
 ```
