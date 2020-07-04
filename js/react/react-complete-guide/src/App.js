@@ -48,14 +48,6 @@ class App extends Component {
   }
 
   render() {
-    const style = {
-      backgroundColor: 'green',
-      color: 'white',
-      font: 'inherit',
-      border: '1px solid blue',
-      padding: '8px',
-      cursor: 'pointer'
-    };
 
     const classes = [];
     if(this.state.persons.length <= 2){
@@ -81,13 +73,12 @@ class App extends Component {
           })}
         </div>
       );
-      style.backgroundColor = 'red';
     }
     return (
       <div className="App">
         <h1>React App</h1>
         <p className={classes.join(' ')}>this is working</p>
-        <button style={style} onClick={this.togglePersom}>Toggle Presons</button>
+        <button className="button" onClick={this.togglePersom}>Toggle Presons</button>
         {persons}
       </div>
     );
