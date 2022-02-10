@@ -100,6 +100,10 @@ int main(){
 }
 
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> 75c1b6d25305f1e4f8f398d5f9fea9008d348507
 ##### AllConstruct
 ```
 #include <iostream>
