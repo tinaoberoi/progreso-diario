@@ -2,6 +2,7 @@
 Logic: for every directed edge uv, vertex u comes before v in the ordering.
 - Not possible if graph not DAG
 - The first vertex in topological sorting is always a vertex with in-degree as 0 (a vertex with no in-coming edges)
+- Not every graph can have a topological sort, 
 Resources:
 https://www.youtube.com/watch?v=eL-KzMXSXXI
 https://cp-algorithms.com/graph/topological-sort.html
