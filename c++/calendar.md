@@ -1,22 +1,22 @@
 #### Calendar for interview prep
 
 ##### Week 1 (28th Feb - 1st March)
-###### 28 Feb  
-[ ] Leetcode Graph Theory 1 Ques  
-[ ] Binary Search Step 1  
 ###### 1 March  
 [ ] Leetcode Graph Theory 1 Ques  
-[ ] Binary Search Step 2
-###### 2 March  
+[ ] Binary Search Step 1  
+###### 2 March
 [ ] Leetcode Graph Theory 1 Ques  
-[ ] Binary Search Step 3
+[ ] Binary Search Step 2
 ###### 3 March  
 [ ] Leetcode Graph Theory 1 Ques  
-[ ] Binary Search Step 4
+[ ] Binary Search Step 3
 ###### 4 March  
 [ ] Leetcode Graph Theory 1 Ques  
-[ ] Binary Search Step 5
+[ ] Binary Search Step 4
 ###### 5 March  
+[ ] Leetcode Graph Theory 1 Ques  
+[ ] Binary Search Step 5
+###### 6 March  
 [ ] Leetcode Graph Theory 4 Ques  
 [ ] March Cook-Off 2022
 ###### 6 March  
