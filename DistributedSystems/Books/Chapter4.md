@@ -104,3 +104,32 @@ Middleware applications logically lives in OSI application layer but are more ge
 
 ![middleware](./img/3middleware.png)
 
+- Here session and presentation are replaced by middleware.
+- Network and transport grouped together to communication which is offered by os
+
+Types of Communication
+<hr>
+
+<ol> Take email delivery for example
+    <ul> Persistent Communication: msg submitted is stores by communication middleware as long it takes to deliver to reciever. Middleare will store msg at different storage facilities.</ul>
+    <ul>Transient: Mesagge stored as long as sending and receiving application are executing. (cannot deliver msg dut to transmission interupt/ recipient not currently active)</ul>
+    <ul>Async: Sender continues immediately after sending message for transmission</ul>
+    <ul>Sync: Sender blocked until msg accepted</ul>
+</ol>
+
+# Remote Procedure Call
+
+Why RPC introduced?
+To call process on another machine.
+
+Idea: make remote procedure call look as much as possible like local one. that is we want RPC to be trasparent the calling procedure should not be aware that the called procedure is executing on a different machine or vice versa
+
+Eg: For process on machine A calls a procedure on machine B, the calling process on A is suspended, and execution of the called procedure takes place on B. Information can be transported from the caller to the callee in the parameters and can come back in the procedure result. No message passing visible to programmer. 
+
+Eg in real life: Checking for fraud detetction on client computer while tests, turning on camera on client, booting up server from remote machine.
+
+Problems?
+
+- Calling and called procedures on different machines and different address space. - params and results have to be passed - this is complicated especially when non identical machines.
+- If one or both machines crash can lead to problems.
+
